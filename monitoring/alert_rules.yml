@@ -1,0 +1,20 @@
+groups:
+  - name: optcg-alerts
+    rules:
+      - alert: OptcgAppDown
+        expr: up{job="optcg-prod"} == 0
+        for: 10s
+        labels:
+          severity: critical
+        annotations:
+          summary: "OPTCG production app is down"
+          description: "Prometheus could not scrape the production target (host.docker.internal:3100) for more than 10s."
+
+      - alert: OptcgHighErrorRate
+        expr: rate(optcg_http_requests_total{status=~"5.."}[1m]) > 0
+        for: 15s
+        labels:
+          severity: warning
+        annotations:
+          summary: "OPTCG production app is returning server errors"
+          description: "At least one 5xx response was recorded on the production app in the last minute."

@@ -25,7 +25,17 @@ python wsgi.py            # http://localhost:3000
 ```
 
 ## CI/CD pipeline (Jenkinsfile)
-Build -> Test -> Code Quality -> Security -> Deploy (Staging :3101) -> Release (Production :3100)
+Build -> Test -> Code Quality -> Security -> Deploy (Staging :3101) -> Release (Production :3100) -> Monitoring
+
+The Monitoring stage deploys Prometheus (scraping the production app's `/metrics`),
+Alertmanager, and a small webhook receiver that stands in for a real notification
+channel. The pipeline simulates an incident by stopping the production container,
+waits for the `OptcgAppDown` alert to fire in Prometheus, confirms the alert was
+delivered to the receiver, then restarts production.
+
+- Prometheus UI: http://localhost:9090
+- Alertmanager UI: http://localhost:9093
+- Alert receiver logs: `docker logs optcg-monitoring-alert-receiver-1`
 
 ## Copyright note
 Card names, stats, and rules text are factual game data used for reference. No official

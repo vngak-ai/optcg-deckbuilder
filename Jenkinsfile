@@ -159,6 +159,54 @@ pipeline {
                 }
             }
         }
+
+        stage('Monitoring') {
+            steps {
+                sh '''
+                    docker compose -p optcg-monitoring -f docker-compose.monitoring.yml up -d --build --wait
+                    docker compose -p optcg-monitoring -f docker-compose.monitoring.yml ps
+
+                    echo "Waiting for Prometheus to mark the production target as up..."
+                    UP=""
+                    for i in $(seq 1 15); do
+                        RESP=$(curl -s http://host.docker.internal:9090/api/v1/targets || true)
+                        if echo "$RESP" | grep -q '"health":"up"'; then UP="yes"; break; fi
+                        sleep 2
+                    done
+                    [ -n "$UP" ] || echo "WARNING: Prometheus target not confirmed up yet, continuing anyway"
+
+                    echo "Simulating an incident: stopping the production container..."
+                    docker stop optcg-prod-web-1
+
+                    echo "Waiting for the OptcgAppDown alert to fire..."
+                    FIRED=""
+                    for i in $(seq 1 20); do
+                        RESP=$(curl -s http://host.docker.internal:9090/api/v1/alerts || true)
+                        if echo "$RESP" | grep -q '"alertname":"OptcgAppDown"' && echo "$RESP" | grep -q '"state":"firing"'; then
+                            FIRED="yes"
+                            break
+                        fi
+                        sleep 3
+                    done
+
+                    echo "Restarting the production container..."
+                    docker start optcg-prod-web-1
+                    sleep 5
+                    curl -sf http://host.docker.internal:3100/health || echo "WARNING: production health check did not respond immediately after restart"
+
+                    if [ -z "$FIRED" ]; then
+                        echo "FAIL: OptcgAppDown alert did not fire within the timeout"
+                        exit 1
+                    fi
+                    echo "PASS: OptcgAppDown alert fired in Prometheus"
+
+                    echo "Checking the alert was delivered to the team notification receiver..."
+                    docker logs optcg-monitoring-alert-receiver-1 2>&1 | grep -q "OptcgAppDown" \
+                        && echo "PASS: alert was delivered to the alert-receiver (simulated team channel)" \
+                        || (echo "FAIL: alert not found in receiver logs" && exit 1)
+                '''
+            }
+        }
     }
 
     post {
@@ -166,7 +214,7 @@ pipeline {
             archiveArtifacts artifacts: 'reports/**', allowEmptyArchive: true
         }
         success {
-            echo "Pipeline OK - v${VERSION} deployed to staging (3101) and production (3100)"
+            echo "Pipeline OK - v${VERSION} deployed to staging (3101), production (3100), monitoring stack on 9090/9093/5001"
         }
         failure {
             echo "Pipeline FAILED at build ${BUILD_NUMBER} - check the stage logs above"
