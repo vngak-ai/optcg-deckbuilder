@@ -1,12 +1,17 @@
 # Monitoring & Alerting stack. Runs alongside the staging/production
 # containers started by docker-compose.yml. Scrapes the production app's
 # /metrics endpoint and routes alerts to a webhook receiver.
+#
+# NOTE: Jenkins talks to a remote Docker Engine (DOCKER_HOST points at
+# host.docker.internal), so these services are built via `docker build`
+# (config files baked into the image) rather than bind-mounted volumes,
+# since a remote daemon cannot see files that only exist in the Jenkins
+# container's own workspace.
 services:
   prometheus:
-    image: prom/prometheus:latest
-    volumes:
-      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
-      - ./monitoring/alert_rules.yml:/etc/prometheus/alert_rules.yml:ro
+    build:
+      context: ./monitoring
+      dockerfile: Dockerfile.prometheus
     ports:
       - "9090:9090"
     extra_hosts:
@@ -14,9 +19,9 @@ services:
     restart: unless-stopped
 
   alertmanager:
-    image: prom/alertmanager:latest
-    volumes:
-      - ./monitoring/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+    build:
+      context: ./monitoring
+      dockerfile: Dockerfile.alertmanager
     ports:
       - "9093:9093"
     restart: unless-stopped
