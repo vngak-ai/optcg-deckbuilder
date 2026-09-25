@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}{{ deck.name }} — OPTCG Deck Builder{% endblock %}
+{% block content %}
+<a class="back-link" href="{{ url_for('main.decks_page') }}">&larr; Back to decks</a>
+<div class="row-between">
+  <h1>{{ deck.name }}</h1>
+  <form method="post" action="{{ url_for('main.deck_delete_form', deck_id=deck.id) }}"
+        onsubmit="return confirm('Delete this deck?');">
+    <button class="btn btn-danger" type="submit">Delete Deck</button>
+  </form>
+</div>
+
+<p class="muted">Leader: <strong>{{ leader.name if leader else "?" }}</strong> ({{ leader.code if leader }})</p>
+<p>{{ deck.total_non_leader_cards() }} / {{ max_deck_size }} cards</p>
+
+{% if errors %}
+<div class="alert alert-warn">
+  <strong>Deck is not legal yet:</strong>
+  <ul>{% for e in errors %}<li>{{ e }}</li>{% endfor %}</ul>
+</div>
+{% else %}
+<div class="alert alert-ok">This deck is legal and tournament-ready.</div>
+{% endif %}
+
+<h2>Cards in this deck</h2>
+<div class="card-grid">
+  {% for row in rows %}
+  <div class="card-tile">
+    {% if row.card %}
+    <a href="{{ url_for('main.card_detail', code=row.card.code) }}">
+      <img src="{{ card_image_url(row.card) }}" alt="{{ row.card.name }}">
+    </a>
+    <div class="card-tile-name">{{ row.card.name }} &times;{{ row.quantity }}</div>
+    <div class="card-tile-meta">{{ row.card.code }}</div>
+    {% else %}
+    <div class="card-tile-name">Unknown card {{ row.card_code if row.card else "" }}</div>
+    {% endif %}
+    <form method="post" action="{{ url_for('main.deck_remove_card_form', deck_id=deck.id, card_code=row.card.code if row.card else '') }}">
+      <button class="btn btn-small" type="submit">Remove</button>
+    </form>
+  </div>
+  {% else %}
+  <p>No cards in this deck yet.</p>
+  {% endfor %}
+</div>
+
+<h2>Add a card</h2>
+<form method="post" action="{{ url_for('main.deck_add_card_form', deck_id=deck.id) }}" class="form-inline">
+  <select name="card_code" required>
+    {% for c in all_cards %}
+      <option value="{{ c.code }}">{{ c.name }} ({{ c.code }}, {{ c.type }})</option>
+    {% endfor %}
+  </select>
+  <input type="number" name="quantity" value="1" min="1" max="4" style="width:70px">
+  <button class="btn" type="submit">Add</button>
+</form>
+{% endblock %}

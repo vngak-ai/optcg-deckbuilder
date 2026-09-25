@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Cards — OPTCG Deck Builder{% endblock %}
+{% block content %}
+<h1>Card Database</h1>
+<form class="filters" method="get">
+  <input type="text" name="q" placeholder="Search name or code..." value="{{ q }}">
+  <select name="type">
+    <option value="">All types</option>
+    {% for t in ["Leader", "Character", "Event"] %}
+      <option value="{{ t }}" {% if type_ == t %}selected{% endif %}>{{ t }}</option>
+    {% endfor %}
+  </select>
+  <select name="color">
+    <option value="">All colors</option>
+    {% for c in ["Red", "Green", "Blue", "Purple", "Black", "Yellow"] %}
+      <option value="{{ c }}" {% if color == c %}selected{% endif %}>{{ c }}</option>
+    {% endfor %}
+  </select>
+  <button type="submit">Search</button>
+</form>
+
+<p class="muted">{{ cards|length }} card(s) found</p>
+
+<div class="card-grid">
+  {% for card in cards %}
+  <a class="card-tile" href="{{ url_for('main.card_detail', code=card.code) }}">
+    <img src="{{ card_image_url(card) }}" alt="{{ card.name }}">
+    <div class="card-tile-name">{{ card.name }}</div>
+    <div class="card-tile-meta">{{ card.code }} · {{ card.type }}</div>
+  </a>
+  {% else %}
+  <p>No cards match your search.</p>
+  {% endfor %}
+</div>
+{% endblock %}

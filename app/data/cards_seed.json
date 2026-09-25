@@ -1,0 +1,877 @@
+{
+  "decks": [
+    {
+      "code": "OP17-079-LUFFY",
+      "name": "Monkey.D.Luffy (OP17-079)",
+      "leader_card": "OP17-079",
+      "cards": [
+        "OP17-080",
+        "OP17-081",
+        "OP17-082",
+        "OP17-084",
+        "OP17-086",
+        "OP17-087",
+        "OP17-089",
+        "OP17-091",
+        "OP17-093",
+        "OP17-094",
+        "OP17-095",
+        "OP17-119",
+        "OP15-088",
+        "OP14-096",
+        "OP17-098"
+      ]
+    },
+    {
+      "code": "OP17-020-SHANKS",
+      "name": "Shanks (OP17-020)",
+      "leader_card": "OP17-020",
+      "cards": [
+        "OP12-034",
+        "ST32-001",
+        "OP17-021",
+        "OP17-032",
+        "OP17-029",
+        "OP17-033",
+        "ST32-002",
+        "OP17-031",
+        "OP17-027",
+        "ST16-004",
+        "ST24-004",
+        "OP17-022",
+        "OP12-037",
+        "OP17-036",
+        "OP17-037"
+      ]
+    },
+    {
+      "code": "OP16-022-LUFFY-ID",
+      "name": "Monkey D. Luffy - Impel Down (OP16-022)",
+      "leader_card": "OP16-022",
+      "cards": [
+        "OP16-034",
+        "ST30-014",
+        "OP16-026",
+        "OP15-032",
+        "OP16-032",
+        "OP16-054",
+        "OP16-055",
+        "ST12-010",
+        "OP16-045",
+        "OP16-056",
+        "OP16-048",
+        "OP16-042",
+        "OP12-037",
+        "OP16-038",
+        "OP02-068",
+        "OP06-058"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "code": "OP17-079",
+      "name": "Monkey.D.Luffy",
+      "type": "Leader",
+      "color": [
+        "Red"
+      ],
+      "cost": null,
+      "life": 5,
+      "power": 5000,
+      "attribute": "Strike",
+      "traits": [
+        "Elbaph",
+        "The Four Emperors",
+        "Straw Hat Crew"
+      ],
+      "effect": "All of your Characters with a cost of 12 or more gain Blocker. (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)"
+    },
+    {
+      "code": "OP17-080",
+      "name": "Usopp",
+      "type": "Character",
+      "color": [
+        "Red"
+      ],
+      "cost": 2,
+      "power": 2000,
+      "counter": 1000,
+      "attribute": "Ranged",
+      "traits": [
+        "Elbaph",
+        "Straw Hat Crew"
+      ],
+      "effect": "If there is a Character with a cost of 12 or more, this Character gains +3000 power. On Play: Look at 3 cards from the top of your deck; reveal up to 1 {Elbaph} type card and add it to your hand. Then, trash the rest."
+    },
+    {
+      "code": "OP17-081",
+      "name": "Gerd",
+      "type": "Character",
+      "color": [
+        "Red"
+      ],
+      "cost": 2,
+      "power": 3000,
+      "counter": 2000,
+      "attribute": "Slash",
+      "traits": [
+        "Giant",
+        "Elbaph",
+        "New Giant Pirates"
+      ],
+      "effect": "If your Leader has the {Elbaph} type, this Character gains +12 cost. On Play: You may trash 1 card from your hand: Add up to 1 Character card with a cost of 8 or less other than [Gerd] from your trash to your hand."
+    },
+    {
+      "code": "OP17-082",
+      "name": "Sanji",
+      "type": "Character",
+      "color": [
+        "Red"
+      ],
+      "cost": 2,
+      "power": 2000,
+      "counter": 1000,
+      "attribute": "Strike",
+      "traits": [
+        "Elbaph",
+        "Straw Hat Crew"
+      ],
+      "effect": "If there is a Character with a cost of 12 or more, this Character gains +3000 power. On Play: Draw 2 cards and trash 2 cards from your hand."
+    },
+    {
+      "code": "OP17-084",
+      "name": "Tony Tony.Chopper",
+      "type": "Character",
+      "color": [
+        "Red"
+      ],
+      "cost": 1,
+      "power": 2000,
+      "counter": 2000,
+      "attribute": "Strike",
+      "traits": [
+        "Animal",
+        "Elbaph",
+        "Straw Hat Crew"
+      ],
+      "effect": "On Play: If there is a Character with a cost of 12 or more, up to 1 of your Characters gains Unblockable during this turn. (This card cannot be blocked.)"
+    },
+    {
+      "code": "OP17-086",
+      "name": "Nami",
+      "type": "Character",
+      "color": [
+        "Red"
+      ],
+      "cost": 1,
+      "power": 2000,
+      "counter": 1000,
+      "attribute": "Special",
+      "traits": [
+        "Elbaph",
+        "Straw Hat Crew"
+      ],
+      "effect": "On Play: You may trash 1 {Elbaph} type card from your hand: Draw 2 cards."
+    },
+    {
+      "code": "OP17-087",
+      "name": "Nico Robin",
+      "type": "Character",
+      "color": [
+        "Red"
+      ],
+      "cost": 2,
+      "power": 2000,
+      "counter": 1000,
+      "attribute": "Strike",
+      "traits": [
+        "Elbaph",
+        "Straw Hat Crew"
+      ],
+      "effect": "If there is a Character with a cost of 12 or more, this Character gains +3000 power. On Play: If there is a Character with a cost of 12 or more, give up to 1 of your opponent's Characters -3000 power during this turn."
+    },
+    {
+      "code": "OP17-089",
+      "name": "Jaguar.D.Saul",
+      "type": "Character",
+      "color": [
+        "Red"
+      ],
+      "cost": 4,
+      "power": 6000,
+      "attribute": "Strike",
+      "traits": [
+        "Giant",
+        "Elbaph",
+        "Former Navy"
+      ],
+      "effect": "This Character gains +12 cost. On Play: Look at 3 cards from the top of your deck; reveal up to 1 {Elbaph} type card and add it to your hand. Then, trash the rest."
+    },
+    {
+      "code": "OP17-091",
+      "name": "Brook",
+      "type": "Character",
+      "color": [
+        "Red"
+      ],
+      "cost": 2,
+      "power": 2000,
+      "counter": 1000,
+      "attribute": "Slash",
+      "traits": [
+        "Elbaph",
+        "Straw Hat Crew"
+      ],
+      "effect": "If there is a Character with a cost of 12 or more, this Character gains +3000 power. On Play: If there is a Character with a cost of 12 or more, your opponent trashes 1 card from their hand."
+    },
+    {
+      "code": "OP17-093",
+      "name": "Monkey.D.Luffy",
+      "type": "Character",
+      "color": [
+        "Red"
+      ],
+      "cost": 8,
+      "power": 8000,
+      "attribute": "Strike",
+      "traits": [
+        "Elbaph",
+        "The Four Emperors",
+        "Straw Hat Crew"
+      ],
+      "effect": "If there is a Character with a cost of 12 or more, this Character gains Rush. On Play: Draw 1 card and play up to 1 Character card with a cost of 2 or less from your trash."
+    },
+    {
+      "code": "OP17-094",
+      "name": "Rodo",
+      "type": "Character",
+      "color": [
+        "Red"
+      ],
+      "cost": 1,
+      "power": 2000,
+      "counter": 2000,
+      "attribute": "Slash",
+      "traits": [
+        "Giant",
+        "Elbaph",
+        "New Giant Pirates"
+      ],
+      "effect": "If your Leader has the {Elbaph} type, this Character gains +12 cost."
+    },
+    {
+      "code": "OP17-095",
+      "name": "Roronoa Zoro",
+      "type": "Character",
+      "color": [
+        "Red"
+      ],
+      "cost": 2,
+      "power": 2000,
+      "counter": 2000,
+      "attribute": "Slash",
+      "traits": [
+        "Elbaph",
+        "Straw Hat Crew"
+      ],
+      "effect": "If there is a Character with a cost of 12 or more, this Character gains +3000 power. If one of your Characters would be removed from the field by your opponent's effect, you may place 3 cards from your trash at the bottom of your deck in any order instead."
+    },
+    {
+      "code": "OP17-119",
+      "name": "Loki",
+      "type": "Character",
+      "color": [
+        "Red"
+      ],
+      "cost": 6,
+      "power": 8000,
+      "attribute": "Strike",
+      "traits": [
+        "Giant",
+        "Elbaph"
+      ],
+      "effect": "This Character gains +12 cost, and if it is your opponent's turn, this Character gains +3000 power. On Play: K.O. your opponent's Characters with a total cost of 4 or less."
+    },
+    {
+      "code": "OP15-088",
+      "name": "Pirate Docking 6",
+      "type": "Character",
+      "color": [
+        "Red"
+      ],
+      "cost": 5,
+      "power": 7000,
+      "attribute": "Strike",
+      "traits": [
+        "Straw Hat Crew"
+      ],
+      "effect": "This Character gains +6 cost. On Play: You may trash 3 cards from the top of your deck: Play up to 1 {Straw Hat Crew} type Character card with a cost of 2 or less from your trash."
+    },
+    {
+      "code": "OP14-096",
+      "name": "Ground Death",
+      "type": "Event",
+      "color": [
+        "Red"
+      ],
+      "cost": 4,
+      "attribute": null,
+      "traits": [
+        "The Seven Warlords of the Sea",
+        "Baroque Works"
+      ],
+      "effect": "Main: You may rest 2 of your DON!! cards: Negate the effect of up to 1 of your opponent's Characters with a cost of 5 or less during this turn. Counter: If you have 10 or more cards in your trash, up to 1 of your Leader or Character cards gains +4000 power during this battle."
+    },
+    {
+      "code": "OP17-098",
+      "name": "Gum-Gum Kong Gun",
+      "type": "Event",
+      "color": [
+        "Red"
+      ],
+      "cost": 5,
+      "attribute": null,
+      "traits": [
+        "Elbaph",
+        "The Four Emperors",
+        "Straw Hat Crew"
+      ],
+      "effect": "Main: You may rest 6 of your DON!! cards: If there is a Character with a cost of 12 or more, K.O. up to 2 of your opponent's Characters with a cost of 6 or less. Counter: Your Leader gains +3000 power during this battle."
+    },
+    {
+      "code": "OP17-020",
+      "name": "Shanks",
+      "type": "Leader",
+      "color": [
+        "Green"
+      ],
+      "cost": null,
+      "life": 5,
+      "power": 5000,
+      "attribute": "Slash",
+      "traits": [
+        "The Four Emperors",
+        "Red-Haired Pirates"
+      ],
+      "effect": "Activate:Main (Once Per Turn) You may trash 1 card from your hand or rest 1 of your DON!! cards: Up to 1 of your opponent's rested Characters will not become active in your opponent's next Refresh Phase."
+    },
+    {
+      "code": "OP12-034",
+      "name": "Perona",
+      "type": "Character",
+      "color": [
+        "Green"
+      ],
+      "cost": 1,
+      "power": 2000,
+      "counter": 1000,
+      "attribute": "Special",
+      "traits": [
+        "Muggy Kingdom",
+        "Thriller Bark Pirates"
+      ],
+      "effect": "On Play: If your leader has the {Slash} attribute, look at the top 5 cards of your deck and reveal up to 1 {Slash} attribute card or 1 green event, and add it in your hand. Then place the rest on the bottom of your deck in any order."
+    },
+    {
+      "code": "ST32-001",
+      "name": "Kin'emon",
+      "type": "Character",
+      "color": [
+        "Green"
+      ],
+      "cost": 1,
+      "power": 2000,
+      "counter": 1000,
+      "attribute": "Slash",
+      "traits": [
+        "Land of Wano",
+        "The Akazaya Nine"
+      ],
+      "effect": "On Play: You may rest 1 of your (Slash) attribute Leaders or DON!! cards: Draw 2 cards and trash 1 card from your hand."
+    },
+    {
+      "code": "OP17-021",
+      "name": "Crone Oli",
+      "type": "Character",
+      "color": [
+        "Green"
+      ],
+      "cost": 1,
+      "power": 0,
+      "counter": 2000,
+      "attribute": "Slash",
+      "traits": [
+        "Red-Haired Pirates Allies"
+      ],
+      "effect": "If your Character with a type including \"Red-Haired Pirates\" would be removed from the field by your opponent's effect, you may rest 1 of your cards instead."
+    },
+    {
+      "code": "OP17-032",
+      "name": "Limejuice",
+      "type": "Character",
+      "color": [
+        "Green"
+      ],
+      "cost": 1,
+      "power": 2000,
+      "counter": 2000,
+      "attribute": "Special",
+      "traits": [
+        "Red-Haired Pirates"
+      ],
+      "effect": "On Play: Look at 3 cards from the top of your deck; reveal up to 1 card with a type including \"Red-Haired Pirates\" and add it to your hand. Then, place the rest at the bottom of your deck in any order."
+    },
+    {
+      "code": "OP17-029",
+      "name": "Hongo",
+      "type": "Character",
+      "color": [
+        "Green"
+      ],
+      "cost": 4,
+      "power": 4000,
+      "counter": 2000,
+      "attribute": "Strike",
+      "traits": [
+        "Red-Haired Pirates"
+      ],
+      "effect": "Blocker. On Play: Set up to 1 of your DON!! cards as active. Then, rest up to 2 of your opponent's Characters with a cost of 2 or less."
+    },
+    {
+      "code": "OP17-033",
+      "name": "Lucky.Roux",
+      "type": "Character",
+      "color": [
+        "Green"
+      ],
+      "cost": 4,
+      "power": 5000,
+      "counter": 1000,
+      "attribute": "Ranged",
+      "traits": [
+        "Red-Haired Pirates"
+      ],
+      "effect": "On Play: Look at 3 cards from the top of your deck; reveal up to 1 card with a type including \"Red-Haired Pirates\" and add it to your hand. Then, place the rest at the bottom of your deck in any order. On Your Opponent's Attack: You may trash this Character: Rest up to 1 of your opponent's Leader or Characters."
+    },
+    {
+      "code": "ST32-002",
+      "name": "Kouzuki Oden",
+      "type": "Character",
+      "color": [
+        "Green"
+      ],
+      "cost": 5,
+      "power": 6000,
+      "counter": 1000,
+      "attribute": "Slash",
+      "traits": [
+        "Land of Wano",
+        "Kouzuki Clan"
+      ],
+      "effect": "On Play: Draw 1 card. Up to 1 of your opponent's Characters with an original cost of 6 or less cannot be rested until the end of your opponent's next End Phase."
+    },
+    {
+      "code": "OP17-031",
+      "name": "Yasopp",
+      "type": "Character",
+      "color": [
+        "Green"
+      ],
+      "cost": 5,
+      "power": 6000,
+      "counter": 1000,
+      "attribute": "Ranged",
+      "traits": [
+        "Red-Haired Pirates"
+      ],
+      "effect": "On Play: Draw 1 card and rest up to 1 of your opponent's Characters with a cost of 8 or less. End of Your Turn: Set up to 1 of your Characters with a type including \"Red-Haired Pirates\" as active."
+    },
+    {
+      "code": "OP17-027",
+      "name": "Benn.Beckman",
+      "type": "Character",
+      "color": [
+        "Green"
+      ],
+      "cost": 7,
+      "power": 9000,
+      "attribute": "Ranged",
+      "traits": [
+        "Red-Haired Pirates"
+      ],
+      "effect": "Rush: Character (This card can attack Characters on the turn in which it is played.) On Play: If your Leader has the {Red-Haired Pirates} type, draw 1 card and rest up to 2 of your opponent's Characters."
+    },
+    {
+      "code": "ST16-004",
+      "name": "Shanks",
+      "type": "Character",
+      "color": [
+        "Green"
+      ],
+      "cost": 9,
+      "power": 11000,
+      "attribute": "Slash",
+      "traits": [
+        "Film",
+        "Four Emperors",
+        "Red Hair Pirates"
+      ],
+      "effect": "On Play: K.O. up to 1 opponent's rested character."
+    },
+    {
+      "code": "ST24-004",
+      "name": "Law & Bepo",
+      "type": "Character",
+      "color": [
+        "Green"
+      ],
+      "cost": 10,
+      "power": 11000,
+      "attribute": "Slash/Strike",
+      "traits": [
+        "Minks",
+        "Supernovas",
+        "Heart Pirates"
+      ],
+      "effect": "On Play: Rest up to 1 of your opponent's Characters and that Character will not become active in your opponent's next Refresh Phase. Then, if your opponent has 2 or more rested Characters, your Leader gains +2000 power until the end of your opponent's next End Phase."
+    },
+    {
+      "code": "OP17-022",
+      "name": "Shanks",
+      "type": "Character",
+      "color": [
+        "Green"
+      ],
+      "cost": 10,
+      "power": 12000,
+      "attribute": "Slash",
+      "traits": [
+        "The Four Emperors",
+        "Red-Haired Pirates"
+      ],
+      "effect": "Rush (This card can attack on the turn in which it is played.) On Play: Set up to 2 of your DON!! cards as active. Then, rest all of your opponent's Characters."
+    },
+    {
+      "code": "OP12-037",
+      "name": "Demonic Nine Sword Style Asura: Dead Man's Game",
+      "type": "Event",
+      "color": [
+        "Green"
+      ],
+      "cost": 1,
+      "attribute": null,
+      "traits": [
+        "Straw Hat Crew"
+      ],
+      "effect": "Main: You may rest 3 of your DON!!: Rest up to a total of 2 of your opponent's characters or DON!! cards. Counter: Your leader gains +3000 power for this battle."
+    },
+    {
+      "code": "OP17-036",
+      "name": "Withdraw Now and Allow Me to Save Face",
+      "type": "Event",
+      "color": [
+        "Green"
+      ],
+      "cost": 1,
+      "attribute": null,
+      "traits": [
+        "The Four Emperors",
+        "Red-Haired Pirates"
+      ],
+      "effect": "Main: You may rest 6 of your DON!! cards: Rest up to 1 of your opponent's Characters. Then, K.O. up to 2 of your opponent's rested Characters with a cost of 6 or less. Counter: Up to 1 of your [Shanks] gains +4000 power during this battle."
+    },
+    {
+      "code": "OP17-037",
+      "name": "Are You That Afraid of the New Era?!!",
+      "type": "Event",
+      "color": [
+        "Green"
+      ],
+      "cost": 1,
+      "attribute": null,
+      "traits": [
+        "The Four Emperors",
+        "Red-Haired Pirates"
+      ],
+      "effect": "Main: Look at 5 cards from the top of your deck; reveal up to 1 card with a type including \"Red-Haired Pirates\" and add it to your hand. Then, place the rest at the bottom of your deck in any order. Counter: You may rest 1 of your cards: Up to 1 of your Leader or Characters gains +3000 power during this battle."
+    },
+    {
+      "code": "OP16-022",
+      "name": "Monkey D. Luffy",
+      "type": "Leader",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": null,
+      "life": 5,
+      "power": 5000,
+      "attribute": "Strike",
+      "traits": [
+        "Impel Down",
+        "Straw Hat Crew"
+      ],
+      "effect": "Activate:Main (Once Per Turn) If the only Characters in your field are {Impel Down} type characters, set up to 2 of your DON!! Cards as active."
+    },
+    {
+      "code": "OP16-034",
+      "name": "Monkey D. Luffy",
+      "type": "Character",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 1,
+      "power": 0,
+      "counter": 1000,
+      "attribute": "Strike",
+      "traits": [
+        "Impel Down",
+        "Straw Hat Crew"
+      ],
+      "effect": "DON!!x1 (Your Turn): For each character you have with a different name, this character gains +1000 power. On Play: Look at 3 cards from the top of your deck; reveal up to 1 {Impel Down} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order."
+    },
+    {
+      "code": "ST30-014",
+      "name": "Mr.3(Galdino)",
+      "type": "Character",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 2,
+      "power": 3000,
+      "counter": 2000,
+      "attribute": "Special",
+      "traits": [
+        "Impel Down",
+        "Former Baroque Works"
+      ],
+      "effect": "Activate:Main: You may rest this Character: Give up to 2 of your Characters with 6000 base power up to 2 rested DON!! cards each."
+    },
+    {
+      "code": "OP16-026",
+      "name": "Emporio.Ivankov",
+      "type": "Character",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 4,
+      "power": 4000,
+      "counter": 1000,
+      "attribute": "Special",
+      "traits": [
+        "Impel Down",
+        "Revolutionary Army"
+      ],
+      "effect": "On Play: Look at 3 cards from the top of your deck; reveal up to 1 {Impel Down} type card, add it to your hand and place the rest at the bottom of your deck in any order. Then, play up to 1 Character card with a cost of 2 or less from your hand."
+    },
+    {
+      "code": "OP15-032",
+      "name": "Brook",
+      "type": "Character",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 6,
+      "power": 6000,
+      "counter": 1000,
+      "attribute": "Slash",
+      "traits": [
+        "Straw Hat Crew"
+      ],
+      "effect": "On Play: Rest up to 1 of your opponent's cards. Activate:Main: You may trash this character: If your leader has the \"Straw Hat Crew\" type, set up to 1 of your characters with an original cost of 8 or less as active."
+    },
+    {
+      "code": "OP16-032",
+      "name": "Boa Hancock",
+      "type": "Character",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 7,
+      "power": 9000,
+      "attribute": "Special",
+      "traits": [
+        "Impel Down",
+        "Seven Warlords",
+        "Kuja Pirates"
+      ],
+      "effect": "Unblockable. On Play: Up to 1 opponent's character other than \"Monkey D. Luffy\" can't be rested until opponent's next End Phase."
+    },
+    {
+      "code": "OP16-054",
+      "name": "Mr. 1 (Daz Bones)",
+      "type": "Character",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 2,
+      "power": 2000,
+      "counter": 1000,
+      "attribute": "Slash",
+      "traits": [
+        "Impel Down",
+        "Former Baroque Works"
+      ],
+      "effect": "DON!!x1 (Your Turn): If you have 5 or more cards in your hand, this Character gains +3000 Power. On Play: Draw 1 card."
+    },
+    {
+      "code": "OP16-055",
+      "name": "Mr.2 Bon Kurei(Bentham)",
+      "type": "Character",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 2,
+      "power": 1000,
+      "attribute": "Strike",
+      "traits": [
+        "Impel Down",
+        "Former Baroque Works"
+      ],
+      "effect": "On Play: Draw 1 card. DON!!x1 (When Attacking): This Character's base power becomes the same as your opponent's Leader's power during this turn."
+    },
+    {
+      "code": "ST12-010",
+      "name": "Emporio.Ivankov",
+      "type": "Character",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 3,
+      "power": 4000,
+      "counter": 1000,
+      "attribute": "Special",
+      "traits": [
+        "Impel Down",
+        "Revolutionary Army"
+      ],
+      "effect": "On Play: Reveal 1 card from the top of your deck and play up to 1 Character card with a cost of 2. Then, place the rest at the top or bottom of your deck. When Attacking (Once Per Turn): Draw 1 card if you have 6 or less cards in your hand."
+    },
+    {
+      "code": "OP16-045",
+      "name": "Crocodile",
+      "type": "Character",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 4,
+      "power": 6000,
+      "attribute": "Special",
+      "traits": [
+        "Impel Down",
+        "Former Baroque Works"
+      ],
+      "effect": "Blocker. On Play: You may return 1 of your characters with a cost of 2 or more to its owner's hand: You may play up to 1 {Impel Down} type Character card with a cost of 2 or less from your hand."
+    },
+    {
+      "code": "OP16-056",
+      "name": "Mr.3(Galdino)",
+      "type": "Character",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 4,
+      "power": 5000,
+      "counter": 1000,
+      "attribute": "Special",
+      "traits": [
+        "Impel Down",
+        "Former Baroque Works"
+      ],
+      "effect": "Activate:Main: You may trash this Character: Draw 2 cards, and up to 1 of your opponent's Characters with a cost of 9 or less cannot attack until the end of your opponent's next End Phase."
+    },
+    {
+      "code": "OP16-048",
+      "name": "Buggy",
+      "type": "Character",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 5,
+      "power": 6000,
+      "counter": 1000,
+      "attribute": "Slash",
+      "traits": [
+        "Impel Down",
+        "Buggy Pirates"
+      ],
+      "effect": "On Play: If your Leader has the {Impel Down} type, draw 1 card and play up to 1 [Prisoner of Impel Down] card from your hand. (Once Per Turn) This effect can be activated when your opponent attacks. Up to 1 of your [Prisoner of Impel Down] cards gains Blocker during this turn."
+    },
+    {
+      "code": "OP16-042",
+      "name": "Prisoner of Impel Down",
+      "type": "Character",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 6,
+      "power": 6000,
+      "counter": 2000,
+      "attribute": "Strike",
+      "traits": [
+        "Impel Down"
+      ],
+      "effect": "Under the rules of this game, you may have any number of this card in your deck."
+    },
+    {
+      "code": "OP16-038",
+      "name": "Let's Go!! To The Navy Headquarters!!",
+      "type": "Event",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 1,
+      "attribute": null,
+      "traits": [
+        "Impel Down",
+        "Straw Hat Crew"
+      ],
+      "effect": "Main: You may rest 6 of your DON!! cards: If you have 5 {Impel Down} type Characters with different card names, set your Leader and all your Characters as active. Counter: Your Leader gains 3000 power during this battle."
+    },
+    {
+      "code": "OP02-068",
+      "name": "Gum Gum Rain",
+      "type": "Event",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 1,
+      "attribute": null,
+      "traits": [
+        "Impel Down",
+        "Straw Hat Pirates"
+      ],
+      "effect": "Counter: You may trash 1 card from your hand: Your Leader or up to 1 of your Characters gains +3000 Power during this battle. Trigger: Return up to 1 Character with a cost of 2 or less to the owner's hand."
+    },
+    {
+      "code": "OP06-058",
+      "name": "Gravity Blade Raging Tiger",
+      "type": "Event",
+      "color": [
+        "Blue",
+        "Green"
+      ],
+      "cost": 7,
+      "attribute": null,
+      "traits": [
+        "Navy"
+      ],
+      "effect": "Main: Place up to 2 characters with cost 6 or less on the bottom of their owner's deck in any order. Trigger: Place up to 1 cost 5 or less character on the bottom of its owner's deck."
+    }
+  ]
+}

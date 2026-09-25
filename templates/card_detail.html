@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}{{ card.name }} — OPTCG Deck Builder{% endblock %}
+{% block content %}
+<a class="back-link" href="{{ url_for('main.index') }}">&larr; Back to cards</a>
+<div class="detail-layout">
+  <img class="detail-art" src="{{ card_image_url(card) }}" alt="{{ card.name }}">
+  <div class="detail-info">
+    <h1>{{ card.name }}</h1>
+    <p class="muted">{{ card.code }} · {{ card.type }} · {{ card.color|join(", ") }}</p>
+    <table class="stat-table">
+      {% if card.cost is not none %}<tr><th>Cost</th><td>{{ card.cost }}</td></tr>{% endif %}
+      {% if card.life is not none %}<tr><th>Life</th><td>{{ card.life }}</td></tr>{% endif %}
+      {% if card.power is not none %}<tr><th>Power</th><td>{{ card.power }}</td></tr>{% endif %}
+      {% if card.counter %}<tr><th>Counter</th><td>+{{ card.counter }}</td></tr>{% endif %}
+      {% if card.attribute %}<tr><th>Attribute</th><td>{{ card.attribute }}</td></tr>{% endif %}
+      <tr><th>Traits</th><td>{{ card.traits|join(" / ") }}</td></tr>
+    </table>
+    <h3>Effect</h3>
+    <p class="effect-text">{{ card.effect }}</p>
+
+    {% if session.username %}
+    <form method="post" action="{{ url_for('main.toggle_favorite', code=card.code) }}">
+      {% if is_favorite %}
+        <button type="submit" class="btn btn-danger">Remove from Collection</button>
+      {% else %}
+        <button type="submit" class="btn">Add to Collection</button>
+      {% endif %}
+    </form>
+    {% else %}
+    <p class="muted"><a href="{{ url_for('main.login_page') }}">Log in</a> to add this card to your collection.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

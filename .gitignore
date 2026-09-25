@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+coverage.xml
+reports/
+.scannerwork/
+sonar-scanner/
+sonar-scanner-cli.zip
+build-info.json

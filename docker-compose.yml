@@ -1,0 +1,16 @@
+services:
+  web:
+    image: optcg-deckbuilder:${IMAGE_TAG:?IMAGE_TAG is required}
+    env_file:
+      - ${ENV_FILE:?ENV_FILE is required}
+    environment:
+      APP_VERSION: ${APP_VERSION:-dev}
+    ports:
+      - "${HOST_PORT:?HOST_PORT is required}:3000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request as u; u.urlopen('http://localhost:3000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 5s

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}My Collection — OPTCG Deck Builder{% endblock %}
+{% block content %}
+<h1>My Collection</h1>
+<p class="muted">Cards you've marked as favorites.</p>
+<div class="card-grid">
+  {% for card in favorites %}
+  <a class="card-tile" href="{{ url_for('main.card_detail', code=card.code) }}">
+    <img src="{{ card_image_url(card) }}" alt="{{ card.name }}">
+    <div class="card-tile-name">{{ card.name }}</div>
+    <div class="card-tile-meta">{{ card.code }}</div>
+  </a>
+  {% else %}
+  <p>You haven't added any cards yet. Go to a card's page and hit "Add to Collection".</p>
+  {% endfor %}
+</div>
+{% endblock %}

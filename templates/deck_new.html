@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}New Deck — OPTCG Deck Builder{% endblock %}
+{% block content %}
+<h1>New Deck</h1>
+<form method="post" class="form-stack">
+  <label>Deck name<input type="text" name="name" required></label>
+  <label>Leader
+    <select name="leader_code" required>
+      {% for l in leaders %}
+        <option value="{{ l.code }}">{{ l.name }} ({{ l.code }}, {{ l.color|join("/") }})</option>
+      {% endfor %}
+    </select>
+  </label>
+  <button type="submit" class="btn">Create Deck</button>
+</form>
+{% endblock %}

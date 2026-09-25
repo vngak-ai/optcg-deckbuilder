@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Decks — OPTCG Deck Builder{% endblock %}
+{% block content %}
+<div class="row-between">
+  <h1>My Decks</h1>
+  <a class="btn" href="{{ url_for('main.deck_new') }}">+ New Deck</a>
+</div>
+<div class="deck-list">
+  {% for s in summaries %}
+  <a class="deck-tile" href="{{ url_for('main.deck_detail', deck_id=s.deck.id) }}">
+    <div class="deck-tile-name">{{ s.deck.name }}</div>
+    <div class="muted">Leader: {{ s.leader.name if s.leader else "?" }}</div>
+    <div class="muted">{{ s.deck.total_non_leader_cards() }} / 50 cards</div>
+    {% if s.errors %}
+      <span class="badge badge-warn">{{ s.errors|length }} issue(s)</span>
+    {% else %}
+      <span class="badge badge-ok">Legal deck</span>
+    {% endif %}
+  </a>
+  {% else %}
+  <p>No decks yet. Create one!</p>
+  {% endfor %}
+</div>
+{% endblock %}
